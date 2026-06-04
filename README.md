@@ -23,6 +23,7 @@ The landing page includes pricing hypothesis, local purchase-intent capture, a p
 ## SEO asset
 
 - [Course structured data checklist](https://ert93333-ops.github.io/course-list-schema-qa-briefs/course-structured-data-checklist.html)
+- [Public launch checklist Gist](https://gist.github.com/ert93333-ops/c086420db83502a855eaf4102e1c47b8)
 
 ## Marketing test URLs
 
