@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ert93333-ops.github.io/course-list-schema-qa-briefs/sitemap.xml

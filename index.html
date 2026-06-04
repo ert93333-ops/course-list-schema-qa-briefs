@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course List Schema QA Briefs | course structured data checklist</title>
+    <meta
+      name="description"
+      content="Paste Course and ItemList JSON-LD, visible catalog notes, provider notes, title notes, URL notes, and owner notes to create a copyable course list schema QA brief."
+    >
+    <link rel="canonical" href="https://ert93333-ops.github.io/course-list-schema-qa-briefs/">
+    <meta property="og:title" content="Course List Schema QA Briefs">
+    <meta property="og:description" content="Catch course catalog schema gaps, too few courses, missing providers, promotional titles, stale URLs, and visible catalog drift.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ert93333-ops.github.io/course-list-schema-qa-briefs/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-product="Course List Schema QA Briefs">
+    <a class="skip-link" href="#workflow">Skip to course schema QA</a>
+
+    <header class="site-header" data-header>
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="Course List Schema QA Briefs home">
+          <span class="brand-mark" aria-hidden="true">CRS</span>
+          <span>Course List Schema QA Briefs</span>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#workflow">Auditor</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#waitlist">Early access</a>
+          <a href="course-structured-data-checklist.html">Checklist</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section">
+        <div class="shell hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Course structured data checklist</p>
+            <h1>Catch course list schema gaps before enrollment pages go live.</h1>
+            <p class="hero-subtitle">
+              Paste Course and ItemList JSON-LD, visible catalog notes, course count notes,
+              provider notes, title/description notes, URL/canonical notes, page type, and owner
+              notes to flag non-course content risk, fewer-than-three list risk, missing fields,
+              provider mismatch, promotional titles, stale URLs, visible catalog drift, and missing
+              cleanup ownership.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#workflow" data-track-cta="hero_audit">Audit sample course catalog</a>
+              <a class="button secondary" href="#waitlist" data-track-cta="hero_waitlist">Request early access</a>
+            </div>
+            <dl class="signal-row" aria-label="Launch facts">
+              <div>
+                <dt>No crawl</dt>
+                <dd>Paste-in static MVP</dd>
+              </div>
+              <div>
+                <dt>Course list</dt>
+                <dd>Catalog plus owner notes</dd>
+              </div>
+              <div>
+                <dt>$79/mo</dt>
+                <dd>Education/agency hypothesis</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="product-preview reveal" aria-label="Product preview">
+            <div class="preview-header">
+              <span class="status-dot"></span>
+              <span>Course catalog launch QA</span>
+            </div>
+            <div class="preview-grid">
+              <div class="url-preview">
+                <p>Only 2 Course items in list</p>
+                <p>provider missing on cohort card</p>
+                <p>Title includes a discount phrase</p>
+                <p class="warn-line">catalog URL still points to old cohort</p>
+              </div>
+              <div class="brief-preview">
+                <p class="brief-label">QA result</p>
+                <strong>Fix before launch</strong>
+                <p>Course count, ItemList fields, provider, title, URL, visible catalog, and owner decision need review.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="workflow" aria-labelledby="workflow-title">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Core workflow</p>
+            <h2 id="workflow-title">Paste Course markup. Get a catalog QA brief.</h2>
+            <p>
+              This MVP analyzes pasted samples in your browser. It does not fetch pages, crawl course
+              sites, call Rich Results Test, use Search Console, connect to LMS platforms, validate
+              eligibility, or store private catalog snippets remotely.
+            </p>
+          </div>
+
+          <div class="auditor-layout">
+            <form class="auditor-panel reveal" id="auditor-form">
+              <div class="field-row">
+                <label for="jsonld-input">Course and ItemList JSON-LD</label>
+                <button class="text-button" type="button" id="load-sample" data-track-cta="load_sample">
+                  Load sample course catalog data
+                </button>
+              </div>
+              <textarea
+                id="jsonld-input"
+                aria-describedby="privacy-note"
+                placeholder="Paste Course and ItemList JSON-LD snippets."
+              ></textarea>
+
+              <label for="visible-notes">Visible catalog notes</label>
+              <textarea
+                id="visible-notes"
+                class="short-textarea"
+                placeholder="Visible course cards, catalog title, cohort names, filters, and whether this is a summary page or detail page."
+              ></textarea>
+
+              <label for="count-notes">Course count notes</label>
+              <textarea
+                id="count-notes"
+                class="short-textarea"
+                placeholder="How many visible courses are on the page, whether at least three are present, and any hidden or filtered catalog cards."
+              ></textarea>
+
+              <label for="provider-notes">Provider notes</label>
+              <textarea
+                id="provider-notes"
+                class="short-textarea"
+                placeholder="Provider organization, campus, bootcamp brand, LMS owner, and whether provider names match visible catalog copy."
+              ></textarea>
+
+              <label for="title-notes">Title and description notes</label>
+              <textarea
+                id="title-notes"
+                class="short-textarea"
+                placeholder="Course title rules, promotional phrases, price copy, short descriptions, and visible learning outcomes."
+              ></textarea>
+
+              <label for="url-notes">URL and canonical notes</label>
+              <textarea
+                id="url-notes"
+                class="short-textarea"
+                placeholder="Course URLs, canonical URLs, old cohort URLs, duplicate cards, and destination owner."
+              ></textarea>
+
+              <label for="owner-notes">Owner notes</label>
+              <textarea
+                id="owner-notes"
+                class="short-textarea"
+                placeholder="Record LMS, course marketing, catalog, frontend, content, and SEO owner remediation decisions."
+              ></textarea>
+
+              <div class="form-grid compact-grid">
+                <label>
+                  Page type
+                  <select id="page-type">
+                    <option selected>Course catalog summary page</option>
+                    <option>All-in-one course list page</option>
+                    <option>Single course detail page</option>
+                    <option>Bootcamp cohort landing page</option>
+                    <option>Catalog migration cleanup</option>
+                  </select>
+                </label>
+              </div>
+
+              <p class="privacy-note" id="privacy-note">
+                Paste only public-safe or anonymized samples. Output is technical SEO and launch QA guidance, not education compliance, accreditation, eligibility, ranking, indexing, enrollment operations, or student-support advice.
+              </p>
+              <div class="workflow-actions">
+                <button class="button primary" type="submit" id="generate-brief" data-track-cta="generate_brief">
+                  Generate Course list schema QA brief
+                </button>
+                <button class="button secondary" type="button" id="copy-brief" disabled>
+                  Copy brief
+                </button>
+              </div>
+              <p class="form-error" id="workflow-error" role="alert" aria-live="polite"></p>
+            </form>
+
+            <aside class="output-panel reveal" aria-labelledby="output-title">
+              <div class="output-header">
+                <div>
+                  <p class="eyebrow">Generated brief</p>
+                  <h3 id="output-title">No audit yet</h3>
+                </div>
+                <span class="confidence-pill" id="status-pill">Waiting</span>
+              </div>
+              <div class="brief-output empty" id="brief-output" aria-live="polite">
+                Load the sample or paste Course markup to generate a course list schema QA brief.
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="why-title">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Why this exists</p>
+            <h2 id="why-title">Course list schema is a catalog, LMS, frontend, content, and SEO handoff problem.</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <h3>Check catalog eligibility</h3>
+              <p>Review course-definition fit, list size, supported page type, and ItemList wiring before launch.</p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Catch provider and title drift</h3>
+              <p>Flag missing providers, promotional course titles, thin descriptions, stale cohort URLs, and visible-card mismatch.</p>
+            </article>
+            <article class="feature-card reveal">
+              <h3>Copy the cleanup handoff</h3>
+              <p>Turn findings into clear LMS, course marketing, catalog, frontend, content, and SEO remediation prompts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="pricing" aria-labelledby="pricing-title">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Pricing hypothesis</p>
+            <h2 id="pricing-title">Reserve early access before billing is connected.</h2>
+            <p>Pricing is tested through demo requests and purchase intent while payments are unavailable.</p>
+          </div>
+          <div class="pricing-grid">
+            <article class="price-card reveal">
+              <p class="plan-name">Solo</p>
+              <p class="plan-price">$19<span>/month</span></p>
+              <p>For one course catalog checking course count, provider fields, titles, URLs, and catalog parity.</p>
+              <button class="button secondary plan-button" type="button" data-plan="Solo - $19/month" data-track-cta="solo_plan">
+                Request Solo access
+              </button>
+            </article>
+            <article class="price-card featured-price reveal">
+              <p class="plan-name">Education/agency</p>
+              <p class="plan-price">$79<span>/month</span></p>
+              <p>For teams checking course launches, catalog migrations, bootcamp cohorts, and LMS template updates.</p>
+              <button class="button primary plan-button" type="button" data-plan="Education/agency - $79/month" data-track-cta="agency_plan">
+                Request Agency access
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="waitlist" aria-labelledby="waitlist-title">
+        <div class="shell waitlist-layout">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Early access</p>
+            <h2 id="waitlist-title">Request the first usable build.</h2>
+            <p>This form stores locally and prepares a public-safe GitHub issue handoff.</p>
+          </div>
+
+          <form class="waitlist-form reveal" id="waitlist-form">
+            <div class="form-grid">
+              <label>
+                Work email
+                <input id="email" name="email" type="email" required value="course-schema-smoke@example.invalid">
+              </label>
+              <label>
+                Role
+                <select id="role" name="role">
+                  <option selected>Education SEO</option>
+                  <option>Bootcamp marketer</option>
+                  <option>LMS content team</option>
+                  <option>University continuing education</option>
+                  <option>Technical SEO agency</option>
+                </select>
+              </label>
+              <label>
+                Course catalog type
+                <select id="catalog-type" name="catalog-type">
+                  <option selected>Course catalog summary page</option>
+                  <option>All-in-one course list page</option>
+                  <option>Single course detail page</option>
+                  <option>Bootcamp cohort landing page</option>
+                  <option>Catalog migration cleanup</option>
+                </select>
+              </label>
+              <label>
+                Launch cadence
+                <select id="launch-cadence" name="launch-cadence">
+                  <option>One catalog migration</option>
+                  <option selected>Monthly course launches</option>
+                  <option>Quarterly cohorts</option>
+                  <option>Large continuing education catalog</option>
+                </select>
+              </label>
+              <label>
+                Plan interest
+                <select id="plan" name="plan">
+                  <option>Solo - $19/month</option>
+                  <option selected>Education/agency - $79/month</option>
+                </select>
+              </label>
+              <label>
+                Willingness to pay
+                <select id="budget" name="budget">
+                  <option>$19/month for one course catalog</option>
+                  <option selected>$79/month for recurring course launch QA</option>
+                  <option>$199/month for large catalog QA</option>
+                  <option>Not sure yet</option>
+                </select>
+              </label>
+              <label class="wide-field">
+                Biggest Course schema QA pain
+                <textarea id="pain" name="pain" class="short-textarea">I need repeatable prelaunch checks for Course/ItemList fields, fewer-than-three course list risk, provider mismatch, promotional titles, stale URLs, visible catalog/schema mismatch, and owner remediation decisions.</textarea>
+              </label>
+            </div>
+            <label class="checkbox-row">
+              <input id="purchase-intent" type="checkbox" checked>
+              <span>This is a real purchase-intent or pilot request if it catches course catalog schema launch risks.</span>
+            </label>
+            <div class="workflow-actions">
+              <button class="button primary" type="submit" data-track-cta="waitlist_submit">Request early access</button>
+              <a class="button secondary" href="#workflow" data-track-cta="waitlist_demo">Try the auditor</a>
+            </div>
+            <p class="form-success" id="waitlist-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="handoff-panel reveal" id="handoff-panel" hidden>
+            <p class="eyebrow">Remote handoff</p>
+            <h3>Send a public-safe demo request</h3>
+            <p>Email stays local. The issue body contains role, catalog type, launch cadence, plan interest, and pain only.</p>
+            <div class="workflow-actions">
+              <a class="button primary" id="remote-intent-link" href="#" target="_blank" rel="noreferrer">Open GitHub demo request</a>
+              <button class="button secondary" type="button" id="copy-request">Copy request details</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" aria-labelledby="resources-title">
+        <div class="shell resources-layout">
+          <div class="section-heading reveal">
+            <p class="eyebrow">SEO asset</p>
+            <h2 id="resources-title">Course structured data checklist</h2>
+            <p>A practical checklist is included for teams searching for course structured data checklist, Course schema QA, course list structured data, course schema checker, and course catalog SEO checklist.</p>
+          </div>
+          <a class="resource-link reveal" href="course-structured-data-checklist.html" data-track-cta="seo_guide">
+            <span>Read the Course structured data checklist</span>
+            <span aria-hidden="true">-&gt;</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="faq-title">
+        <div class="shell faq-layout">
+          <div class="section-heading reveal">
+            <p class="eyebrow">FAQ</p>
+            <h2 id="faq-title">Course schema QA constraints are explicit.</h2>
+          </div>
+          <details class="reveal">
+            <summary>Does it crawl course pages?</summary>
+            <p>No. It produces a launch QA brief from pasted metadata and notes only.</p>
+          </details>
+          <details class="reveal">
+            <summary>Does it call Search Console or Rich Results Test?</summary>
+            <p>No. This MVP is browser-local and does not call Search Console, Rich Results Test, LMS platforms, or external APIs.</p>
+          </details>
+          <details class="reveal">
+            <summary>Does it connect to an LMS?</summary>
+            <p>No. Provider, catalog, and course launch details are pasted as notes for static QA only.</p>
+          </details>
+          <details class="reveal">
+            <summary>Does it guarantee eligibility or rankings?</summary>
+            <p>No. It is technical SEO and launch QA guidance, not education compliance, accreditation, eligibility, ranking, indexing, enrollment operations, or student-support advice.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>Course List Schema QA Briefs</span>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

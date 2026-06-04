@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course structured data checklist | Course List Schema QA Briefs</title>
+    <meta
+      name="description"
+      content="A practical course structured data checklist for Course list markup, ItemList fields, provider names, course URLs, and visible catalog parity."
+    >
+    <link rel="canonical" href="https://ert93333-ops.github.io/course-list-schema-qa-briefs/course-structured-data-checklist.html">
+    <meta property="og:title" content="Course structured data checklist">
+    <meta property="og:description" content="Check Course list schema before catalog launches, cohort pages, and LMS template updates.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ert93333-ops.github.io/course-list-schema-qa-briefs/course-structured-data-checklist.html">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#checklist">Skip to checklist</a>
+
+    <header class="site-header" data-header>
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="Course List Schema QA Briefs home">
+          <span class="brand-mark" aria-hidden="true">CRS</span>
+          <span>Course List Schema QA Briefs</span>
+        </a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html#workflow">Auditor</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#waitlist">Early access</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="article-hero section">
+        <div class="shell article-layout">
+          <div class="article-copy reveal">
+            <p class="eyebrow">Course structured data checklist</p>
+            <h1>Prelaunch QA for Course list schema and catalog pages.</h1>
+            <p class="hero-subtitle">
+              Use this checklist before publishing course catalog summary pages, bootcamp cohort pages,
+              continuing education catalogs, or LMS template changes.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="index.html#workflow" data-track-cta="checklist_try_tool">Audit sample course catalog</a>
+              <a class="button secondary" href="index.html#waitlist" data-track-cta="checklist_waitlist">Request early access</a>
+            </div>
+          </div>
+          <div class="product-preview reveal" aria-label="Checklist preview">
+            <div class="preview-header">
+              <span class="status-dot"></span>
+              <span>Course catalog QA</span>
+            </div>
+            <div class="url-preview">
+              <p>Course list has fewer than 3 courses</p>
+              <p>ListItem position missing</p>
+              <p>provider.name blank on one card</p>
+              <p class="warn-line">Visible catalog URL differs from schema</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="checklist">
+        <div class="shell content-narrow">
+          <article class="guide-block reveal">
+            <h2>1. Confirm the page is a real course catalog</h2>
+            <ul class="guide-list">
+              <li>The page represents educational content with curriculum, lessons, modules, or a clear learning outcome.</li>
+              <li>It is not a general webinar, event page, coupon page, blog article, or thin lead magnet.</li>
+              <li>The visible catalog cards match the courses represented in JSON-LD.</li>
+              <li>The page type decision is clear: summary page, all-in-one list page, or detail page paired with a summary list.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>2. Check course count and ItemList wiring</h2>
+            <ul class="guide-list">
+              <li>Course list pages represent at least three courses when using the course list pattern.</li>
+              <li>The page includes an `ItemList` when the summary/list page needs list markup.</li>
+              <li>Each `ListItem` has a `position` value.</li>
+              <li>Each item has a unique course URL.</li>
+              <li>List order in JSON-LD matches the visible catalog order or has a documented reason.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>3. Check Course fields</h2>
+            <ul class="guide-list">
+              <li>Each `Course` has a neutral `name`.</li>
+              <li>Each `Course` has a useful `description` that explains the course or learning outcome.</li>
+              <li>Descriptions are not empty, duplicated, or only marketing slogans.</li>
+              <li>Course titles do not include discounts, prices, or promotional phrases.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>4. Check provider consistency</h2>
+            <ul class="guide-list">
+              <li>Provider names match the visible course catalog or institution owner.</li>
+              <li>Provider values are not blank on some courses.</li>
+              <li>Provider naming is consistent across LMS templates, catalog cards, and JSON-LD.</li>
+              <li>Multi-campus or multi-brand catalogs have an owner decision for provider naming.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>5. Check URL and canonical drift</h2>
+            <ul class="guide-list">
+              <li>Each course URL points to the current public course detail or catalog destination.</li>
+              <li>Old cohort URLs are removed from current catalog markup.</li>
+              <li>Duplicate course URLs are resolved.</li>
+              <li>Visible course-card links, canonical URLs, and JSON-LD URLs agree.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>6. Assign remediation owners</h2>
+            <ul class="guide-list">
+              <li>LMS owner confirms source fields.</li>
+              <li>Course marketing confirms visible titles and descriptions.</li>
+              <li>Catalog or frontend owner confirms list rendering and canonical links.</li>
+              <li>SEO owner confirms final markup handoff.</li>
+              <li>No launch proceeds with owner fields marked TBD.</li>
+            </ul>
+          </article>
+
+          <article class="guide-block reveal">
+            <h2>7. Keep public handoffs safe</h2>
+            <ul class="guide-list">
+              <li>Do not paste private student data, LMS exports, credentials, or enrollment data into public issues.</li>
+              <li>Use anonymized Course/ItemList snippets for public demo requests.</li>
+              <li>Treat this checklist as technical SEO launch QA, not education compliance, accreditation, ranking, indexing, or student-support advice.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <span>Course List Schema QA Briefs</span>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
